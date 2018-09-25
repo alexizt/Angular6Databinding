@@ -8,7 +8,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class CockpitComponent implements OnInit {
 
-  newServerName = '';
+  // newServerName = '';
   newServerContent = '';
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   // bpCreated will be the name exposed to outside
@@ -19,16 +19,17 @@ export class CockpitComponent implements OnInit {
   ngOnInit() {
   }
 
-  onAddServer() {
+  onAddServer(nameInput: HTMLInputElement) {
+    console.log(nameInput.value);
     this.serverCreated.emit({
-      serverName: this.newServerName, 
+      serverName: nameInput.value, 
       serverContent: this.newServerContent
     });
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(nameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
-      serverName: this.newServerName,
+      serverName: nameInput.value,
       serverContent: this.newServerContent
     });
   }
