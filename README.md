@@ -1,23 +1,23 @@
 Udemy - Angular 6 - Databinding
 =======
 
-**Event binding:**
+## Event binding: ##
 (click)=componentFunction($event)
 
 **Element binding with local reference (cant bind only to the template):**
 #MyElement
 
-**Interpolation:**
+## Interpolation: ##
 {{ MyProperty }}
 
-**Property Binding:**
+## Property Binding: ##
 [MyProperty]
 
 
-**Parent to child binding:**
-## Parent Component template: ##
+## Parent to child binding: ##
+** Parent Component template: **
 <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement"></app-server-element>
 
-## Child Component: ##
+** Child Component: **
 on code:  @Input('srvElement') element: {type: string, name: string, content: string};
 on template: <label>{{ element.content }}</label>
