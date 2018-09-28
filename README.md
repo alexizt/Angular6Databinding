@@ -7,7 +7,7 @@ Udemy - Angular 6 - Databinding
 **Element binding with local reference (cant bind only to the template):**
 #MyElement
 
-## Interpolation: ##
+## Interpolation Binding: ##
 {{ MyProperty }}
 
 ## Property Binding: ##
