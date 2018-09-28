@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Element } from '../element.model'
 
 @Component({
   selector: 'app-server-element',
@@ -10,7 +11,7 @@ export class ServerElementComponent implements OnInit {
 
   // srvElement will be the name exposed to outside, if ommitted it will be the default
   // in this case: element
-  @Input('srvElement') element: {type: string, name: string, content: string};
+  @Input('srvElement') element: Element;
 
   constructor() { }
 
