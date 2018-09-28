@@ -49,6 +49,7 @@ on template:
 
 **On parent template:**
 >(**serverCreated**)="onServerAdded($event)"
+
 **On parent code:**
  > onServerAdded(serverData: {serverName: string, serverContent: string}) {
  >   this.serverElements.push(
