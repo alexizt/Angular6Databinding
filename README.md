@@ -15,9 +15,9 @@ Udemy - Angular 6 - Databinding
 
 
 ## Parent to child binding: ##
-** Parent Component template: **
+**Parent Component template:**
 <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement"></app-server-element>
 
-** Child Component: **
-on code:  @Input('srvElement') element: {type: string, name: string, content: string};
-on template: <label>{{ element.content }}</label>
+**Child Component:**
+> on code:  @Input('srvElement') element: {type: string, name: string, content: string};
+> on template: <label>{{ element.content }}</label>
