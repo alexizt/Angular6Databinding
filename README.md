@@ -35,3 +35,23 @@ on code:
 on template: 
 ><label>{{ element.content }}</label>
 
+#Event Binding#
+**on child component code:**
+>  @Output() **serverCreated** = new EventEmitter<{serverName: string, serverContent: string}>();
+>  ...
+>  onAddServer(nameInput: HTMLInputElement) {
+>    console.log(nameInput.value);
+>    this.serverCreated.emit({
+>      serverName: nameInput.value, 
+>      serverContent: this.newServerContent
+>    });
+>  }
+
+**On parent template:**
+>(**serverCreated**)="onServerAdded($event)"
+**On parent code:**
+ > onServerAdded(serverData: {serverName: string, serverContent: string}) {
+ >   this.serverElements.push(
+ >     new Element('server', serverData.serverName, serverData.serverContent)
+ >   );
+ > }
