@@ -35,7 +35,8 @@ on code:
 on template: 
 ><label>{{ element.content }}</label>
 
-##Event Binding##
+
+## Event Binding ##
 **on child component code:**
 >  @Output() **serverCreated** = new EventEmitter<{serverName: string, serverContent: string}>();
 >  ...
